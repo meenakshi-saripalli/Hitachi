@@ -1,0 +1,23 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+Description: The replicated bucket
+
+Resources:
+  mydestinationbucket2:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: BucketOwnerFullControl
+      VersioningConfiguration:
+        Status: Enabled
+      BucketEncryption: 
+        ServerSideEncryptionConfiguration: 
+        - ServerSideEncryptionByDefault:
+            SSEAlgorithm: AES256
+
+Outputs:
+  BucketName:
+    Description: S3 bucket name
+    Value: !Ref mydestinationbucket2
+  BucketArn:
+    Description: The ARN of the bucket
+    Value: !GetAtt mydestinationbucket2.Arn
