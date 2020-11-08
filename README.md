@@ -17,4 +17,4 @@ Once the buckets are created in two different regions, then you can test the fil
 
 Note: The files with the naming convention 'log.datxxxxxx' will only be processed as per the configuration.
 
-Sample file is also attached which need to be tested.
+Sample files(log.dat01, log.dat.01) are also attached,  which should be used for testing the case.
