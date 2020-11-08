@@ -7,7 +7,7 @@ Parameters:
     Type: String
 
 Resources:
-  mysourcebucket2:
+  mysourcebucket:
     Type: AWS::S3::Bucket
     Properties:
       AccessControl: BucketOwnerFullControl
@@ -47,7 +47,7 @@ Resources:
 Outputs:
   BucketName:
     Description: S3 bucket name
-    Value: !Ref mysourcebucket2
+    Value: !Ref mysourcebucket
   BucketArn:
     Description: The ARN of the bucket
-    Value: !GetAtt mysourcebucket2.Arn
+    Value: !GetAtt mysourcebucket.Arn
