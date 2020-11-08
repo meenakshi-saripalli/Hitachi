@@ -20,7 +20,7 @@ Resources:
       ReplicationConfiguration:
         Role: !GetAtt ReplicationRole.Arn
         Rules:
-          - Prefix: 'log'
+          - Prefix: 'log.dat'
             Status: Enabled
             Destination:
               Bucket: !Ref ReplicatedBucketArn
